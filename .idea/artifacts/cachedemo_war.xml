@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cachedemo:war">
+    <output-path>$PROJECT_DIR$/cachedemo/target</output-path>
+    <root id="archive" name="cachedemo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="cachedemo:war exploded" />
+    </root>
+  </artifact>
+</component>
