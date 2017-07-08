@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            $.get("findMovies",function(result){
+                $("#tab tr:not(#head)").empty();
+                $.each(result, function(index, obj){
+                    $("#tab").append(
+                        "<tr>"+
+                        "<td>"+obj.mid+"</td>"+
+                        "<td>"+obj.movieName+"</td>"+
+                        "<td>"+obj.releaseDate+"</td>"+
+                        "<td>"+obj.describe+"</td>"+
+                        "</tr>"
+                    );
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="tab" border="1">
+        <tr id="head">
+            <th>序号</th>
+            <th>名称</th>
+            <th>上映时间</th>
+            <th>简介</th>
+        </tr>
+    </table>
+</body>
+</html>
